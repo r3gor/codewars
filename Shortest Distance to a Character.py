@@ -4,13 +4,24 @@ def shortest_to_char(s, c):
 
 	for i in range(len(s)):
 		if c == lista[i]:
-			lista[i]=0
+			lista[i]=0	
+	for i in range(len(lista)):
 	
-	print(lista)
+		if type(lista[i])==int:
+			continue
+		elif 0<i<len(lista) and type(lista[i-1])==int and type(lista [i+1])==int:
+			if lista[i+1]<=lista[i-1]:
+				lista[i]=lista[i+1]+1
 
-	for i in range(len(s)-1):
-		if lista[i+1]!=0 and type(lista[i])==int:
-			lista[i+1]=lista[i]+1
+
+
+
+	
+	# print(lista)
+
+	# for i in range(len(s)-1):
+	# 	if lista[i+1]!=0 and type(lista[i])==int:
+	# 		lista[i+1]=lista[i]+1
 	
 	# for i in range(len(s)-1):
 	# 	if lista[i-1]!=0 and type(lista[i])==int:

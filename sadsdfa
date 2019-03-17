@@ -1,0 +1,4 @@
+def day_and_time(mins):
+    dias= mins/(24*60)
+    horas= (mins-(dias*24*60))/(60)
+    min=(mins-horas*60-dias*24*60)
